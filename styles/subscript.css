@@ -1,0 +1,14 @@
+.subscript-top, .subscript-bot {
+    /* border: none; */
+    width: 20px;
+    min-width: 10px;
+}
+
+.subscript-top {
+    margin-bottom: 5px;
+}
+
+.subscript-bot {
+    font-size: 10px;
+}
+
