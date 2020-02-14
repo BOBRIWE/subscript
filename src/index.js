@@ -1,3 +1,5 @@
+require('./index.css').toString();
+
 class Subscript {
     /**
    * Class name for term-tag
@@ -5,7 +7,7 @@ class Subscript {
    * @type {string}
    */
   static get CSS() {
-    return 'cdx-subscript';
+    return 'subscript';
   };
 
   /**
@@ -162,11 +164,11 @@ class Subscript {
 
   /**
    * Sanitizer rule
-   * @return {{subscript: {class: string}}}
+   * @return {{sub: {class: string}}}
    */
   static get sanitize() {
     return {
-      subscript: {
+      sub: {
         class: Subscript.CSS
       }
     };

@@ -1,4 +1,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
 <script src="../dist/bundle.js"></script>
 
 <div id="editorjs"></div>
@@ -7,17 +8,22 @@
 
 <script>
     const editor = new EditorJS({
-      autofocus: true,
       tools: {
-        subscript: {
-            class: Subscript
-        }
-      }
+        Subscript: {
+            class: Subscript,
+            shortcut: 'CMD+SHIFT+S',
+        },
+          Marker: {
+              class: Marker,
+              shortcut: 'CMD+SHIFT+M',
+          }
+      },
+        data: {}
     });
 
     document.getElementById('save-button').onclick = () => {
         editor.save().then((outputData) => {
-        console.log('Article data: ', outputData)
+        console.log('Article data: ', JSON.stringify(outputData, null, 4))
         }).catch((error) => {
         console.log('Saving failed: ', error)
         });

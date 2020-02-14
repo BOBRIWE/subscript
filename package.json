@@ -2,10 +2,10 @@
   "name": "@bobriwe/subscript",
   "version": "1.0.0",
   "description": "Subscript tool for editor js",
-  "main": "index.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "build": "webpack --mode production",
-    "build:dev": "webpack --mode development --watch"
+    "build:dev": "webpack --watch  --mode development"
   },
   "keywords": [],
   "author": "bobriwe",
